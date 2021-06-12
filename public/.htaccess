@@ -1,0 +1,12 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteRule ^(.*)radio.php$ - [L]
+RewriteRule ^(.*)about.php$ - [L]
+RewriteRule ^(.*)lock360.php$ - [L]
+RewriteRule ^(.*).php$ /index.php [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
